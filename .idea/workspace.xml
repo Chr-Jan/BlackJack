@@ -23,6 +23,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -39,6 +42,23 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
 }</component>
+  <component name="QodanaHighlightedReportService">
+    <option name="localRunNotPublishedPersistedInfo">
+      <LocalReportPersistedInfo>
+        <option name="path" value="C:\Users\chris\AppData\Local\Temp\qodana_output\qodana.sarif.json" />
+        <option name="reportGuid" value="d7790a5a-cd98-4f02-92f2-afe2ff537c4b" />
+        <option name="reportName" value="BlackJack/qodana/2024-06-12" />
+      </LocalReportPersistedInfo>
+    </option>
+  </component>
+  <component name="QodanaIsSelectedPersistenceService">
+    <option name="selectedOrLoading" value="true" />
+  </component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="C:\Users\chris\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="d7790a5a-cd98-4f02-92f2-afe2ff537c4b" reportId="BlackJack/qodana/2024-06-12" />
+    </option>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
