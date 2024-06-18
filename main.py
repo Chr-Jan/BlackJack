@@ -122,31 +122,36 @@ class Game:
         """
         Play the specified number of games of Blackjack.
         """
-        games_to_play = self.get_number_of_games()
+        while True:
+            games_to_play = self.get_number_of_games()
 
-        for game_number in range(1, games_to_play + 1):
-            deck = Deck()
-            deck.shuffle()
+            for game_number in range(1, games_to_play + 1):
+                deck = Deck()
+                deck.shuffle()
 
-            player_hand = Hand()
-            dealer_hand = Hand(dealer=True)
+                player_hand = Hand()
+                dealer_hand = Hand(dealer=True)
 
-            player_hand.add_card(deck.deal(2))
-            dealer_hand.add_card(deck.deal(2))
+                player_hand.add_card(deck.deal(2))
+                dealer_hand.add_card(deck.deal(2))
 
-            print(f"\n{'*' * 30}\nGame {game_number} of {games_to_play}\n{'*' * 30}")
-            player_hand.display()
-            dealer_hand.display()
+                print(f"\n{'*' * 30}\nGame {game_number} of {games_to_play}\n{'*' * 30}")
+                player_hand.display()
+                dealer_hand.display()
 
-            if self.check_winner(player_hand, dealer_hand):
-                continue
+                if self.check_winner(player_hand, dealer_hand):
+                    continue
 
-            self.player_turn(player_hand, deck)
-            if self.check_winner(player_hand, dealer_hand):
-                continue
+                self.player_turn(player_hand, deck)
+                if self.check_winner(player_hand, dealer_hand):
+                    continue
 
-            self.dealer_turn(dealer_hand, deck)
-            self.show_final_results(player_hand, dealer_hand)
+                self.dealer_turn(dealer_hand, deck)
+                self.show_final_results(player_hand, dealer_hand)
+
+            if not self.ask_to_play_again():
+                print("Thanks for playing! Goodbye.")
+                break
 
     @staticmethod
     def get_number_of_games():
@@ -237,6 +242,23 @@ class Game:
         print("Your hand:", player_hand.get_value())
         print("Dealer's hand:", dealer_hand.get_value())
         Game.check_winner(player_hand, dealer_hand, game_over=True)
+
+    @staticmethod
+    def ask_to_play_again():
+        """
+        Ask the player if they want to play again.
+
+        Static Method: This method operates on the parameters passed to it and does not require access to any
+        specific instance variables of the Game class. It encapsulates the functionality of asking the player if they want to continue playing.
+        """
+        while True:
+            choice = input("Do you want to play again? (Y/N): ").lower()
+            if choice in ["y", "yes"]:
+                return True
+            elif choice in ["n", "no"]:
+                return False
+            else:
+                print("Please enter 'Y' (Yes) or 'N' (No).")
 
 
 # Create a game instance and start the game

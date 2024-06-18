@@ -24,6 +24,9 @@
   <li>Python 3.x</li>
 </ul>
 
+<h2>Example</h2>
+<image src="GitHub_images/BlackJack.png"></image>
+
 <h2>Sequence Diagram</h2>
 <image src="GitHub_images/sequenceDiagram.png"></image>
 
